@@ -1,3 +1,12 @@
 // Place all the styles related to the Restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+	background-color: #fdf8e1;
+	border: 1px solid #f2cb3c;
+	h2 {
+		color: #c41200;
+		font-weight: bold;
+	}
+}
