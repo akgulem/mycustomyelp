@@ -6,6 +6,14 @@
       <%= @restaurant.name %>
     </h2>
 
+    <div class="star-rating">
+      <%= @avg_rating %>
+    </div>
+
+    <p>
+      <%= "#{@reviews.length} reviews"%>
+    </p>
+
     <p>
       <strong>Address:</strong>
       <%= @restaurant.address %>
@@ -26,10 +34,18 @@
     <% if @reviews.blank? %>
       <h2>No reviews yet. Be the first to write one!</h2>
     <% else %>
-      <% @reviews.each do |review| %>
-        <p><%= review.rating %></p>
-        <p><%= review.comment %></p>
-      <% end %>
+      <table class="table">
+        <tbody>
+          <% @reviews.each do |review| %>
+            <tr>
+              <td>
+                <p><%= review.rating %></p>
+                <p><%= review.comment %></p>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     <% end %>
   </div>
 </div>
